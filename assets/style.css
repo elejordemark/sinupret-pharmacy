@@ -356,9 +356,9 @@ span.title {
 .thumb-logo{
     right: calc(29.05 / 1024* 100vw);
     position: absolute;
-    bottom: calc(0.61 / 768* 100vh);
-    width: calc(286.9787 / 1024* 100vw);
-    height: calc(81.7021 / 768 * 100vh);
+    bottom: calc(8 / 768* 100vh);
+    width: calc(226.9787 / 1024* 100vw);
+    /* height: calc(81.7021 / 768 * 100vh); */
     margin: auto;
     z-index: 999;
 }

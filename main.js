@@ -121,8 +121,8 @@ function goToReference(){
     if(pageAnimClear[historyPageStep-1]){
         pageAnimClear[historyPageStep-1]();
     }
-    trackPageChange("15");
-    goToPage(15);
+    trackPageChange("4");
+    goToPage(4);
 }
 function goToSmPC(){
     historyPageStep = getCurrentPage();
@@ -131,8 +131,8 @@ function goToSmPC(){
     if(pageAnimClear[historyPageStep-1]){
         pageAnimClear[historyPageStep-1]();
     }
-    trackPageChange("17");
-    goToPage(17);
+    trackPageChange("4");
+    goToPage(4);
 }
 $(document).on( "click", ".sidebar .tree li span img", function( event ){
     event.preventDefault(); event.stopPropagation();
