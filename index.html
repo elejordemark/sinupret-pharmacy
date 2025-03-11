@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, minimum-scale=1" />
+
+    <base href="." />
+    <title>Menarini</title>
+    <link rel="stylesheet" href="./jquery/jquery.css" />
+    <script src="./jquery/jquery.js"></script>
+    <script src="./jquery/jquery-mobile.js"></script>
+    <script>
+        $.mobile.pushStateEnabled = false;
+    </script>
+    
+    <link rel="stylesheet" type="text/css" href="./assets/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/animate.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/animate.min.css" />
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css" type="text/css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./assets/style.css"/>
+    <link rel="stylesheet" href="./assets/css/tree.css" />
+    <link href="./assets/fancybox-master/dist/jquery.fancybox.css" rel="stylesheet" />
+
+</head>
+
+<style>
+  @keyframes wave-front {
+    100% {
+      transform: translate(-50%, 0);
+    }
+  }
+  .wave-with-anim{
+    animation: wave-front .7s infinite linear;
+  }
+
+</style>
+<body>
+    <div data-role="page" id="page1" data-md-event-id="1" class="pagebg-1" data-prev="0" data-next="2">
+        <div data-role="content" class="row">
+            <img src="./assets/img/global/background.jpg" 
+                style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh;" 
+                alt="">
+            <img src="./assets/img/global/SinupretEngagerLogo.png" 
+            style="position: absolute; top: calc(13.2877/804 * 100vh); left: calc(36.6047/1024 * 100vw); width: calc(270/1024 * 100vw); height: calc(83/804 * 100vh);" 
+            alt="">
+            <img src="./assets/img/global/Proven.png" 
+            style="position: absolute; top: calc(18.4322/804 * 100vh); left: calc(500.6176/1024 * 100vw); width: calc(473/1024 * 100vw); height: calc(54/804 * 100vh);" 
+            alt="">
+            <img class="center-piece-animation" src="./assets/img/Page1/greenorb.png" 
+            style="position: absolute; top: calc(302.9731/804 * 100vh); left: calc(425.754/1024 * 100vw); width: calc(213/1024 * 100vw); height: calc(199/804 * 100vh);" 
+            alt="">
+            <img class="circle-plant-animation plant1" src="./assets/img/Page1/plant1.png" 
+            style="position: absolute; top: calc(310.8936/804 * 100vh); left: calc(182.5319/1024 * 100vw); width: calc(183/1024 * 100vw); height: calc(169/804 * 100vh);" 
+            alt="">
+            <img class="circle-plant-animation plant2" src="./assets/img/Page1/plant2.png" 
+            style="position: absolute; top: calc(116.8511/804 * 100vh); left: calc(355.1277/1024 * 100vw); width: calc(176/1024 * 100vw); height: calc(170/804 * 100vh);" 
+            alt="">
+            <img class="circle-plant-animation plant3" src="./assets/img/Page1/plant3.png" 
+            style="position: absolute; top: calc(186.6686/804 * 100vh); left: calc(619.0673/1024 * 100vw); width: calc(188/1024 * 100vw); height: calc(170/804 * 100vh);" 
+            alt="">
+            <img class="circle-plant-animation plant4" src="./assets/img/Page1/plant4.png" 
+            style="position: absolute; top: calc(428.431/804 * 100vh); left: calc(659.7882/1024 * 100vw); width: calc(188/1024 * 100vw); height: calc(179/804 * 100vh);" 
+            alt="">
+            <img class="circle-plant-animation plant5" src="./assets/img/Page1/plant5.png" 
+            style="position: absolute; top: calc(551.6078/804 * 100vh); left: calc(425.754/1024 * 100vw); width: calc(202/1024 * 100vw); height: calc(164/804 * 100vh);" 
+            alt="">
+            <img src="./assets/img/Page1/medicine.png" 
+            style="position: absolute; top: calc(447.4894/804 * 100vh); left: calc(0/1024 * 100vw); width: calc(448/1024 * 100vw); height: calc(274/804 * 100vh);" 
+            alt="">
+        </div>
+    </div>
+    
+  <div data-role="page" id="page2" data-md-event-id="2" class="pagebg-2" data-prev="1" data-next="3">
+    <div data-role="content" class="row">
+        <img src="./assets/img/global/background.jpg" 
+                style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh;" 
+                alt="">
+        <img src="./assets/img/global/SinupretEngagerLogo.png" 
+        style="position: absolute; top: calc(13.2877/804 * 100vh); left: calc(36.6047/1024 * 100vw); width: calc(270/1024 * 100vw); height: calc(83/804 * 100vh);" 
+        alt="">
+        <img src="./assets/img/global/Proven.png" 
+        style="position: absolute; top: calc(18.4322/804 * 100vh); left: calc(500.6176/1024 * 100vw); width: calc(473/1024 * 100vw); height: calc(54/804 * 100vh);" 
+        alt="">
+        <img src="assets/img/Page2/content-2.png" 
+        style="position: absolute; 
+               top: calc(192.7009 / 804 * 100vh); 
+               left: calc(27.4091 / 1024 * 100vw); 
+               width: calc(968 / 1024 * 100vw); 
+               height: calc(474 / 804 * 100vh);" 
+        alt="">
+        <img src="assets/img/Page2/p2-1.png" class="green-glow" 
+        style="position: absolute; 
+                top: calc(219.8432 / 804 * 100vh); 
+                left: calc(60.5357 / 1024 * 100vw); 
+                width: calc(48 / 1024 * 100vw); 
+                height: calc(168 / 804 * 100vh);" 
+        alt="">
+        <img src="assets/img/Page2/p2-2.png" class="green-glow"
+        style="position: absolute; 
+               top: calc(472.3131 / 804 * 100vh); 
+               left: calc(52.4749 / 1024 * 100vw); 
+               width: calc(80 / 1024 * 100vw); 
+               height: calc(170 / 804 * 100vh);" 
+        alt="">
+        <img src="assets/img/Page2/p2-3.png" class="green-glow"
+        style="position: absolute; 
+               top: calc(219.8432 / 804 * 100vh); 
+               left: calc(545.6284 / 1024 * 100vw); 
+               width: calc(78 / 1024 * 100vw); 
+               height: calc(168 / 804 * 100vh);" 
+        alt="">
+        <img src="assets/img/Page2/p2-4.png" class="green-glow"
+        style="position: absolute; 
+               top: calc(473.6451 / 804 * 100vh); 
+               left: calc(539.2915 / 1024 * 100vw); 
+               width: calc(90 / 1024 * 100vw); 
+               height: calc(168 / 804 * 100vh);" 
+        alt="">
+   
+   
+    </div>
+  </div>
+  <div data-role="page" id="page3" data-md-event-id="3" class="pagebg-3" data-prev="2" data-next="4">
+    <div data-role="content" class="row">
+        <img src="./assets/img/global/background.jpg" 
+                style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh;" 
+                alt="">
+        <img src="./assets/img/global/SinupretEngagerLogo.png" 
+        style="position: absolute; top: calc(13.2877/804 * 100vh); left: calc(36.6047/1024 * 100vw); width: calc(270/1024 * 100vw); height: calc(83/804 * 100vh);" 
+        alt="">
+        <img src="./assets/img/global/Proven.png" 
+        style="position: absolute; top: calc(18.4322/804 * 100vh); left: calc(500.6176/1024 * 100vw); width: calc(473/1024 * 100vw); height: calc(54/804 * 100vh);" 
+        alt="">
+        <img src="assets/img/Page3/dosage.png" 
+        style="position: absolute; 
+                top: calc(166.0728 / 804 * 100vh); 
+                left: calc(204.8428 / 1024 * 100vw); 
+                width: calc(616 / 1024 * 100vw); 
+                height: calc(35 / 804 * 100vh);" 
+        alt="">
+        <img src="assets/img/Page3/white-bg-3.png" 
+        style="position: absolute; 
+                top: calc(235.2399 / 804 * 100vh); 
+                left: calc(48.3444 / 1024 * 100vw); 
+                width: calc(937 / 1024 * 100vw); 
+                height: calc(459 / 804 * 100vh);" 
+        alt="">
+        <img src="assets/img/Page3/content-3.png" 
+        style="position: absolute; 
+               top: calc(300.8716 / 804 * 100vh); 
+               left: calc(62.8864 / 1024 * 100vw); 
+               width: calc(905 / 1024 * 100vw); 
+               height: calc(359 / 804 * 100vh);" 
+        alt="">
+        <img src="assets/img/Page3/img-1.png" class="green-glow"
+        style="position: absolute; 
+               top: calc(301.8404 / 804 * 100vh); 
+               left: calc(141.7588 / 1024 * 100vw); 
+               width: calc(85 / 1024 * 100vw); 
+               height: calc(101 / 804 * 100vh);" 
+        alt="">
+        <img src="assets/img/Page3/img-2.png" class="green-glow"
+        style="position: absolute; 
+               top: calc(407.6019 / 804 * 100vh); 
+               left: calc(117.3414 / 1024 * 100vw); 
+               width: calc(136 / 1024 * 100vw); 
+               height: calc(141 / 804 * 100vh);" 
+        alt="">
+        <img src="assets/img/Page3/img-3.png" class="green-glow"
+        style="position: absolute; 
+               top: calc(538.5478 / 804 * 100vh); 
+               left: calc(119.7935 / 1024 * 100vw); 
+               width: calc(131 / 1024 * 100vw); 
+               height: calc(131 / 804 * 100vh);" 
+        alt="">
+   
+   
+
+
+ 
+    </div>
+</div>
+<div data-role="page" id="page4" data-md-event-id="4" class="pagebg-4" data-prev="3" data-next="5">
+    <div data-role="content" class="row">
+        <img src="./assets/img/global/background.jpg" 
+                style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh;" 
+                alt="">
+        <img src="./assets/img/global/SinupretEngagerLogo.png" 
+        style="position: absolute; top: calc(13.2877/804 * 100vh); left: calc(36.6047/1024 * 100vw); width: calc(270/1024 * 100vw); height: calc(83/804 * 100vh);" 
+        alt="">
+        <img src="./assets/img/global/Proven.png" 
+        style="position: absolute; top: calc(18.4322/804 * 100vh); left: calc(500.6176/1024 * 100vw); width: calc(473/1024 * 100vw); height: calc(54/804 * 100vh);" 
+        alt="">
+        <img src="assets/img/Page4/content4.png" 
+        style="position: absolute; 
+               top: calc(156.8686 / 804 * 100vh); 
+               left: calc(43.971 / 1024 * 100vw); 
+               width: calc(930 / 1024 * 100vw); 
+               height: calc(542 / 804 * 100vh);" 
+        alt="">
+        <img src="assets/img/Page4/phmat.png" 
+        style="position: absolute; 
+                top: calc(687.9751 / 804 * 100vh); 
+                left: calc(855.6815 / 1024 * 100vw); 
+                width: calc(146 / 1024 * 100vw); 
+                height: calc(12 / 804 * 100vh);" 
+        alt="">
+
+   
+    </div>
+</div>
+
+
+    <!--Arrow Keys-->
+    <!-- <img class="" id="ArrowLeft" src="./assets/img/global/ArrowLeft.png" style="position: absolute; left:calc(13.0798/1024 * 100vw); top:calc(371.7007/1024 * 100vw); width:calc(22.7435/1024 * 100vw); height:calc(34.7111/1024 * 100vw);" alt="">
+    <img class="" id="ArrowRight" src="./assets/img/global/ArrowRight.png" style="position: absolute; left:calc(990.0603/1024 * 100vw); top:calc(371.7007/1024 * 100vw); width:calc(22.7435/1024 * 100vw); height:calc(34.7111/1024 * 100vw);" alt=""> -->
+  <!-- Modal -->
+
+  <!-- Modal content-->
+
+  <div class="clearfix"></div>
+  <div class="bottom-bar">
+      <div class="left-actions">
+          <div class="button-action">
+
+              <img id="sidepanel-btn" srcset="
+            assets/thumbnail-panel.png,
+            assets/thumbnail-panel@2x.png 2x
+          " src="assets/thumbnail-panel.png" />
+          </div>
+          <div class="button-action">
+              <img onclick="goToIndex();"  srcset="assets/safety-panel.png, assets/safety-panel@2x.png 2x"
+                  src="assets/safety-panel.png" />
+          </div>
+          <div class="button-action">
+              <img onclick="goToReference();"  srcset="assets/biblio-panel.png, assets/biblio-panel@2x.png 2x"
+                  src="assets/biblio-panel.png" />
+          </div>
+          <!-- <div class="button-action">
+              <img   srcset="assets/new.png, assets/new@2x.png 2x"
+                  src="assets/new.png" />
+          </div> -->
+      </div>
+      <div class="center">
+          <div class="logo">
+              <img src="assets/Menarini.svg" />
+          </div>
+      </div>
+      <div class="right-actions">
+          <!-- <p class="bottom-text">SmPC for</p> -->
+          <img onclick="goToSmPC();"  class="thumb-logo " src="assets/footer-logo.png" alt="" />
+      </div>
+  </div>
+
+
+  <div class="sidebar">
+      <div class="tree">
+          <ul>
+              <li>
+                  <span class="page1">
+                      <img target="1" class="img-responsive" src="thumbnails/1.jpg" />
+                  </span>
+              </li>
+              <li>
+                  <span class="page2">
+                      <img target="2" class="img-responsive" src="thumbnails/2.jpg" />
+                  </span>
+              </li>
+              <li>
+                  <span class="page3">
+                      <img target="3" class="img-responsive" src="thumbnails/3.jpg" />
+                  </span>
+              </li>
+              <li>
+                  <span class="page4">
+                      <img target="4" class="img-responsive" src="thumbnails/4.jpg" />
+                  </span>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <!-- <script src="assets/js/jquery-3.3.1.min.js"></script> -->
+  <script src="tracking-lib.js"></script>
+  <script src="main.js"></script>
+  <!-- <script src="./main.js"></script> -->
+  <script src="manifest.json"></script>
+  <script type="text/javascript" src="assets/js/popper.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/fancybox-master/dist/jquery.fancybox.js"></script>
+  <script type="text/javascript" src="./assets/js/custom.js"></script>
+  <script type="text/javascript" src="./assets/js/search.js"></script>
+  <!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->    
+  <script src="./gsap-public/minified/gsap.min.js"></script>
+  <script src="./gsap-public/minified/Flip.min.js"></script>
+  <script src="./gsap-public/minified/ScrollTrigger.min.js"></script>
+  <script src="./gsap-public/minified/Observer.min.js"></script>
+  <script src="./gsap-public/minified/ScrollToPlugin.min.js"></script>
+  <script src="./gsap-public/minified/Draggable.min.js"></script>
+  <script src="./gsap-public/minified/MotionPathPlugin.min.js"></script>
+  <script src="./gsap-public/minified/EaselPlugin.min.js"></script>
+  <script src="./gsap-public/minified/PixiPlugin.min.js"></script>
+  <script src="./gsap-public/minified/TextPlugin.min.js"></script>
+  <script src="./gsap-public/minified/EasePack.min.js"></script>
+  <script src="./gsap-public/minified/CustomEase.min.js"></script>
+  <script defer>
+    var tlpage1 = gsap.timeline();
+    var tlpage2 = gsap.timeline();
+    var tlpage3 = gsap.timeline();
+    var tlpage3second = gsap.timeline();
+    var tlpage4 = gsap.timeline();
+    var tlpage4second = gsap.timeline();
+    var tlpage5 = gsap.timeline();
+    var tlpage6 = gsap.timeline();
+    var tlpage7 = gsap.timeline();
+    var tlpage8 = gsap.timeline();
+    var tlpage9 = gsap.timeline();
+    var tlpage10 = gsap.timeline();
+    var tlpage11 = gsap.timeline();
+    var tlpage12 = gsap.timeline();
+    var tlpage13 = gsap.timeline();
+    var tlpage14 = gsap.timeline();
+    var tlpage15 = gsap.timeline();
+    var tlpage16 = gsap.timeline();
+    var tlpage17 = gsap.timeline();
+    // var borderLineHeight = gsap.getProperty("#borderline", "height");
+
+    function page1Animation() {
+        // Initial setup for hiding elements by setting opacity to 0
+        tlpage1.set('.center-piece-animation', { opacity: 0 })
+            .set('.circle-plant-animation', { opacity: 0 });
+
+        // Animate the green orb with glow effect
+        tlpage1.to('.center-piece-animation', { 
+            opacity: 1, 
+            duration: 0.8, 
+            ease: "power3.inOut", 
+            delay: 0.3,
+            filter: "drop-shadow(0px 40px 100px rgba(0, 255, 0, 0.8))" // Green glow
+        })
+        
+        // Set plants to initial offset positions before animation
+        tlpage1.set(".circle-plant-animation.plant1", { x: "50", y: "50" })
+            .set(".circle-plant-animation.plant2", { x: "-50", y: "50" })
+            .set(".circle-plant-animation.plant3", { x: "-50", y: "-50" })
+            .set(".circle-plant-animation.plant4", { x: "50", y: "-50" })
+            .set(".circle-plant-animation.plant5", { x: "50", y: "-50" })
+        
+        // Animate plants moving to their original positions with a snappier effect
+        tlpage1.to(".circle-plant-animation", { 
+            x: "0", 
+            y: "0", 
+            opacity: 1, 
+            duration: 1.2, 
+            ease: "power4.out", 
+            stagger: 0.32
+        });
+    }
+    
+    function page2Animation() {
+        // Animate elements with class "show-animation"
+        tlpage2.set('#page2 .show-animation', { opacity: 0 })
+        .set('#page2 .show-texts-animation, .rotating-ellipsis-animation', { opacity: 0 })
+        .set('#page2 .rotating-ellipsis-animation', { rotation: 0 })
+            .to('#page2 .show-animation', { 
+                opacity: 1, 
+                duration: 1, 
+                ease: "power3.inOut", 
+                stagger: 0.5,
+                delay: 0.6
+            })
+            .to('.rotating-ellipsis-animation', {
+                rotation: 360,
+                duration: 1.5,
+                ease: "power2.inOut",
+                opacity: 1
+            })
+            .to('.show-texts-animation', { 
+                opacity: 1, 
+                duration: 0.5, 
+                ease: "power3.inOut", 
+                stagger: 0.2 
+            }); // Start slightly before ellipsis finishes rotating
+    }
+
+
+
+    function page3Animation() {
+
+        tlpage3.set("#page3 .fade-type", {
+            opacity: 0
+        })
+        tlpage3.set("#page3 .scale-y-type", {
+            scaleY: 0,
+            transformOrigin: "bottom"
+        })
+        tlpage3.set("#page3 .highlight-gsap", {
+            scale: 0.5
+        })
+        .to(".show-order-1", { 
+            opacity: 1, 
+            duration: 0.8, 
+            delay: 0.8,
+            ease: "power2.out" 
+        })
+        .to(".show-order-2", { 
+            opacity: 1, 
+            duration: 0.8,
+            ease: "power2.out" 
+        }, "-=0.15")
+        .to(".group-1-order-1", { 
+            scaleY: 1, 
+            duration: 0.3,
+            ease: "power2.out" 
+        }, "-=0.15")
+        .to(".group-1-order-2", { 
+            opacity: 1, 
+            duration: 0.3,
+            ease: "power2.out" 
+        }, "-=0.25")
+        .to(".group-2-order-1", { 
+            scaleY: 1, 
+            duration: 0.3,
+            ease: "power2.out" 
+        }, "-=0.15")
+        .to(".group-2-order-2", { 
+            opacity: 1, 
+            duration: 0.3,
+            ease: "power2.out" 
+        }, "-=0.25")
+        .to(".group-3-order-1", { 
+            scaleY: 1, 
+            duration: 0.3,
+            ease: "power2.out" 
+        }, "-=0.15")
+        .to(".group-3-order-2", { 
+            opacity: 1, 
+            duration: 0.3,
+            ease: "power2.out" 
+        }, "-=0.25")
+        .to(".group-3-order-3", { 
+            opacity: 1, 
+            scale: 1,
+            duration: 0.7,
+            ease: "bounce.out" 
+        }, "-=0.3")
+        .to(".group-4-order-1", { 
+            scaleY: 1, 
+            duration: 0.3,
+            ease: "power2.out" 
+        }, "-=0.45")
+        .to(".group-4-order-2", { 
+            opacity: 1, 
+            duration: 0.3,
+            ease: "power2.out" 
+        }, "-=0.25")
+        .to(".group-5-order-1", { 
+            scaleY: 1, 
+            duration: 0.3,
+            ease: "power2.out" 
+        }, "-=0.15")
+        .to(".group-5-order-2", { 
+            opacity: 1, 
+            duration: 0.3,
+            ease: "power2.out" 
+        }, "-=0.25")
+        .to(".group-6-order-1", { 
+            scaleY: 1, 
+            duration: 0.3,
+            ease: "power2.out" 
+        }, "-=0.15")
+        .to(".group-6-order-2", { 
+            opacity: 1, 
+            duration: 0.3,
+            ease: "power2.out" 
+        }, "-=0.25")
+        .to(".group-6-order-3", { 
+            opacity: 1, 
+            scale: 1,
+            duration: 0.7,
+            ease: "bounce.out" 
+        }, "-=0.3")
+        .to(".group-7-order-1", { 
+            scaleY: 1, 
+            duration: 0.3,
+            ease: "power2.out" 
+        }, "-=0.45")
+        .to(".group-7-order-2", { 
+            opacity: 1, 
+            duration: 0.3,
+            ease: "power2.out" 
+        }, "-=0.25")
+        .to(".group-8-order-1", { 
+            scaleY: 1, 
+            duration: 0.3,
+            ease: "power2.out" 
+        }, "-=0.15")
+        .to(".group-8-order-2", { 
+            opacity: 1, 
+            duration: 0.3,
+            ease: "power2.out" 
+        }, "-=0.25")
+        .to(".group-8-order-3", { 
+            opacity: 1, 
+            scale: 1,
+            duration: 0.7,
+            ease: "bounce.out" 
+        }, "-=0.3")
+    }
+
+
+    function page4Animation() {
+        tlpage4.set("#page4 .fade-type", { opacity: 0, y: 30 });
+
+        // Animate elements sequentially with stagger
+        tlpage4.to("#page4 .show-order-1", { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" })
+            .to("#page4 .show-order-2", { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, "-=0.3")
+            .to("#page4 .show-order-3", { opacity: 1, y: 0, duration: 0.8, ease: "bounce.out" }, "-=0.2") // Bounce effect
+            .to("#page4 .show-order-4", { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, "-=0.3")
+            .to("#page4 .show-order-5", { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, "-=0.3");
+    }
+
+
+    function page5Animation() {
+        const animatedImages = document.querySelectorAll("[class^='page5-']");
+        
+        // Set initial opacity to 0 (hidden)
+        gsap.set(animatedImages, { autoAlpha: 0 });
+
+        // Animate to opacity 1 with a fast stagger effect
+        tlpage5.to(animatedImages, {
+            autoAlpha: 1, // Ensures fade-in instead of fade-out
+            duration: 0.7, // Fast fade-in
+            ease: "power2.out",
+            stagger: 0.1, // Fast stagger,
+            delay: 0.4
+        });
+    }
+
+
+    function page6Animation() {
+        tlpage6.set(".onlyThingAnimatedFadeIn2", { opacity: 0 })
+            .to(".onlyThingAnimatedFadeIn2", { // Fade in the specific class separately
+                opacity: 1,
+                duration: 0.7,
+                delay: 0.4,
+                ease: "power2.inOut"
+            });
+    }
+
+    function page7Animation() {
+        tlpage7.from(".onlyThingAnimatedFadeIn3", { 
+            opacity: 0, 
+            duration: 1, 
+            ease: "power2.out" ,
+            delay: 0.4
+        });
+    }
+
+    function page8Animation(){
+        tlpage8.from(".page8-1stAnimation,.page8-2ndAnimation", { 
+            opacity: 0, 
+            duration: 0.8, 
+            stagger: 0.3 ,
+            delay: 0.4
+        });
+    }
+
+    function page9Animation(){
+        tlpage9.from(".page9-1stAnimation", { 
+            opacity: 0, 
+            duration: 0.3,
+            delay: 0.3 
+        })
+        .from(".page9-2ndAnimation", { 
+            opacity: 0, 
+            duration: 0.3 
+        }, "+=0.3");
+    }
+    function page10Animation() {
+        tlpage10.set(".page10FirstAnimation, .page10-2ndAnimation", {
+            opacity: 0
+        }).set(".page10-3rdAnimation",{
+            scaleY: 0,
+            transformOrigin: "bottom center"
+        })
+        .to(".page10FirstAnimation", {
+            opacity: 1,
+            duration: 0.6,
+            ease: "power2.inOut",
+            delay: 0.3
+        })
+        .to(".page10-2ndAnimation", {
+            opacity: 1,
+            duration: 0.6,
+            ease: "power2.inOut"
+        })
+        .to(".page10-3rdAnimation", { 
+            scaleY: 1,
+            duration: 0.6,
+            ease: "power2.inOut"
+        });
+    }
+
+    function page11Animation() {
+        tlpage11.set(".Bar, .BarHandle", {
+            transformOrigin: "bottom",
+            scaleY: 0
+        }).set(".page11FirstAnimation, .page11-2ndAnimation, .page11-3rdAnimation, .page11-4thAnimation, .dot1 , .page11-5thAnimation, .page11-6thAnimation, .dot2 , .page11-7thAnimation, .page11-8thAnimation, .dot3 , .page11-9thAnimation, .page11-10thAnimation", {
+            opacity: 0
+        }).set(".page11-3rdAnimation, .page11-4thAnimation, .dot1, .page11-5thAnimation, .page11-6thAnimation, .dot2, .page11-7thAnimation, .page11-8thAnimation, .dot3 , .page11-9thAnimation, .page11-10thAnimation", {
+            y: -50
+        })
+        
+        // Fade-in the first two elements
+        .to(".page11FirstAnimation", { opacity: 1, duration: 0.3, delay: 0.15 })
+        .to(".page11-2ndAnimation", { opacity: 1, duration: 0.3 }, "-=0.15")
+
+        // Stagger bars and handles together with a slight delay
+        .to(".Bar", { scaleY: 1, duration: 0.3, ease: "power2.out", stagger: 0.15 }, "start")
+        // .to(".BarHandle", { scaleY: 1, duration: 0.3, ease: "power2.out", stagger: 0.15 }, "start+=0.1") // Slight offset for stagger effect
+
+        // Animate the rest of the elements
+        .to(".page11-3rdAnimation, .page11-4thAnimation, .dot1 , .page11-5thAnimation, .page11-6thAnimation, .dot2 , .page11-7thAnimation, .page11-8thAnimation, .dot3 , .page11-9thAnimation, .page11-10thAnimation", 
+            { opacity: 1, y: 0, duration: 0.3, stagger: 0.1 }, "-=0.2");
+    }
+
+
+    function page12Animation() {
+        tlpage12.from(".page12FirstAnimation", {
+            opacity: 0,
+            duration: 0.8,
+            ease: "bounce.out",
+            delay: 0.3
+        })
+        .from(".page12stagger", {
+            opacity: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            stagger: 0.2
+        });
+    }
+    function page13Animation() {
+        tlpage13.from(".page13FirstAnimation", {
+            opacity: 0,
+            duration: 0.3,
+            ease: "power2.out",
+            delay: 0.5
+        })
+        .from([
+            ".page13-2ndAnimation",
+            ".page13-3rdAnimation",
+            ".page13-4thAnimation",
+            ".page13-5thAnimation",
+            ".page13-6thAnimation"
+        ], {
+            opacity: 0,
+            duration: 0.3,
+            ease: "power2.out",
+            stagger: 0.2 // Adjust stagger time as needed
+        });
+    }
+    function page14Animation() {
+        // Staggered fade-in for elements with .dosagestagger
+        tlpage14.from(".dosagestagger", {
+            opacity: 0,
+            duration: 0.6,
+            ease: "power2.out",
+            stagger: 0.3,
+            delay: 0.3
+        });
+
+        // Fade-in for the last element
+        tlpage14.from(".orderDosageLast", {
+            opacity: 0,
+            scale: 0.8,  // Start slightly smaller
+            duration: 0.5,
+            ease: "bounce.out"  // Adds a pop-up bounce effect
+        });
+    }
+
+    function page15Animation(){
+    }
+    function page16Animation(){
+    }
+    function page17Animation(){
+    }
+    function page1AnimClear(){
+        tlpage1.clear()
+    }
+    function page2AnimClear(){
+        tlpage2.clear()
+    }
+    function page3AnimClear(){
+        tlpage3.clear()
+        tlpage3second.clear();
+    }
+    function page4AnimClear(){
+        tlpage4.clear()
+        tlpage4second.clear();
+    }
+    function page5AnimClear(){
+        tlpage5.clear()
+    }
+    function page6AnimClear(){
+        tlpage6.clear()
+    }
+    function page7AnimClear(){
+        tlpage7.clear()
+    }
+    function page8AnimClear(){
+        tlpage8.clear()
+    }
+    function page9AnimClear(){
+        tlpage9.clear()
+    }
+    function page10AnimClear(){
+        tlpage10.clear()
+    }
+    function page11AnimClear(){
+        tlpage11.clear()
+    }
+    function page12AnimClear(){
+        tlpage12.clear()
+    }
+    function page13AnimClear(){
+        tlpage13.clear()
+    }
+    function page14AnimClear(){
+        tlpage14.clear()
+    }
+    function page15AnimClear(){
+        tlpage15.clear()
+    }
+    function page16AnimClear(){
+        tlpage16.clear()
+    }
+    function page17AnimClear(){
+        tlpage17.clear()
+    }
+    async function page1AnimReverse(){
+        await tlpage1.reverse(0);
+        tlpage1.play()
+        tlpage1.set('#bg-water',{
+        y: '220%'
+        })
+        .set('#minitext',{
+        x: '-100%',
+        opacity: 0
+        })
+        .set('#borderline',{
+        height: 0,
+        scaleX: 1,
+        transformOrigin: 'top center',
+        })
+        .set('#ability',{
+        y: '100%',
+        opacity: 0
+        })
+        .pause();
+    }
+    page1Animation();
+
+    gsap.to(".green-glow", {
+            filter: "drop-shadow(0px 0px 20px rgba(0, 255, 0, 100))",
+            duration: 1.5,
+            repeat: 5,
+            yoyo: true
+        });
+  </script>
+
+</body>
+
+
+</html>
