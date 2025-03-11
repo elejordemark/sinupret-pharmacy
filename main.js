@@ -300,23 +300,10 @@ $(document).on('click', 'img[src="assets/img/global/ArrowLeft.png"], img[src="as
 
 
 var pagedescription = [
-    "Ranexa Home Summary Page",
-    "Myocardial Ischemia Pathophysiology",
-    "Ranolazine Mechanism of Action",
-    "2024 ESC Guidelines for CCS Management Algorithm",
-    "2024 ESC Guidelines for CCS Management: Non-Obstructive Coronary Arteries", 
-    "2024 ESC Guidelines for CCS Management Recommendation on Anti-Anginal Agents", 
-    "2024 ESC Guidelines for CCS Management Updates", 
-    "Ranolazine Key Clinical Trials", 
-    "CARISA Efficacy", 
-    "ERIC Efficacy", 
-    "MARISA Efficacy", 
-    "Ranolazine (Ranexa) Pharmacokinetic Profile", 
-    "Ranolazine (Ranexa) Indication & Dosing Guide", 
-    "Ranolazine (Ranexa) Parity Pricing", 
-    "List of References", 
-    "Abridged Product Information", 
-    "2025 Ranexa eDA Mandatories"
+    "Cover page",
+    "Summary of Key Benefits",
+    "Dosage & Administration",
+    "Abridged Product Information"
 ];
 function trackPageChange(currentPage) {
     if (eventToEnd != null) {

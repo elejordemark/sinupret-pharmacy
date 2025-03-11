@@ -328,27 +328,30 @@
 
     function page1Animation() {
         // Initial setup for hiding elements by setting opacity to 0
-        tlpage1.set('.center-piece-animation', { opacity: 0 })
-            .set('.circle-plant-animation', { opacity: 0 });
-
-        // Animate the green orb with glow effect
-        tlpage1.to('.center-piece-animation', { 
-            opacity: 1, 
-            duration: 0.8, 
-            ease: "power3.inOut", 
-            delay: 0.3,
-            filter: "drop-shadow(0px 40px 100px rgba(0, 255, 0, 0.8))" // Green glow
-        })
-        
-        // Set plants to initial offset positions before animation
-        tlpage1.set(".circle-plant-animation.plant1", { x: "50", y: "50" })
+        tlpage1.set('.center-piece-animation', { opacity: 0, scale: 0.8, filter: "none" })
+            .set('.circle-plant-animation', { opacity: 0 })
+            .set(".circle-plant-animation.plant1", { x: "50", y: "50" })
             .set(".circle-plant-animation.plant2", { x: "-50", y: "50" })
             .set(".circle-plant-animation.plant3", { x: "-50", y: "-50" })
             .set(".circle-plant-animation.plant4", { x: "50", y: "-50" })
             .set(".circle-plant-animation.plant5", { x: "50", y: "-50" })
-        
-        // Animate plants moving to their original positions with a snappier effect
-        tlpage1.to(".circle-plant-animation", { 
+
+        // Animate the green orb with glow effect
+        .to('.center-piece-animation', { 
+            opacity: 1, 
+            duration: 1.5, 
+            scale: 1.2,
+            delay: 0.2,
+            filter: "drop-shadow(0px 40px 100px rgba(0, 255, 0, 0.8))" // Green glow
+        })
+        .to(".center-piece-animation", {
+            filter: "drop-shadow(0px 40px 180px rgba(0, 255, 0, 100))",
+            scale: 1.5,
+            duration: 1.5,
+            repeat: -1,
+            yoyo: true
+        })
+        .to(".circle-plant-animation", { 
             x: "0", 
             y: "0", 
             opacity: 1, 
@@ -360,324 +363,56 @@
     
     function page2Animation() {
         // Animate elements with class "show-animation"
-        tlpage2.set('#page2 .show-animation', { opacity: 0 })
-        .set('#page2 .show-texts-animation, .rotating-ellipsis-animation', { opacity: 0 })
-        .set('#page2 .rotating-ellipsis-animation', { rotation: 0 })
-            .to('#page2 .show-animation', { 
-                opacity: 1, 
-                duration: 1, 
-                ease: "power3.inOut", 
-                stagger: 0.5,
-                delay: 0.6
-            })
-            .to('.rotating-ellipsis-animation', {
-                rotation: 360,
-                duration: 1.5,
-                ease: "power2.inOut",
-                opacity: 1
-            })
-            .to('.show-texts-animation', { 
-                opacity: 1, 
-                duration: 0.5, 
-                ease: "power3.inOut", 
-                stagger: 0.2 
-            }); // Start slightly before ellipsis finishes rotating
+        tlpage2.set('#page2 .green-glow', { filter: "none" })
+        .to("#page2 .green-glow", {
+            filter: "drop-shadow(0px 0px 20px rgba(0, 255, 0, 100))",
+            duration: 1.5,
+            repeat: -1,
+            yoyo: true,
+        });
     }
 
 
 
     function page3Animation() {
-
-        tlpage3.set("#page3 .fade-type", {
-            opacity: 0
-        })
-        tlpage3.set("#page3 .scale-y-type", {
-            scaleY: 0,
-            transformOrigin: "bottom"
-        })
-        tlpage3.set("#page3 .highlight-gsap", {
-            scale: 0.5
-        })
-        .to(".show-order-1", { 
-            opacity: 1, 
-            duration: 0.8, 
-            delay: 0.8,
-            ease: "power2.out" 
-        })
-        .to(".show-order-2", { 
-            opacity: 1, 
-            duration: 0.8,
-            ease: "power2.out" 
-        }, "-=0.15")
-        .to(".group-1-order-1", { 
-            scaleY: 1, 
-            duration: 0.3,
-            ease: "power2.out" 
-        }, "-=0.15")
-        .to(".group-1-order-2", { 
-            opacity: 1, 
-            duration: 0.3,
-            ease: "power2.out" 
-        }, "-=0.25")
-        .to(".group-2-order-1", { 
-            scaleY: 1, 
-            duration: 0.3,
-            ease: "power2.out" 
-        }, "-=0.15")
-        .to(".group-2-order-2", { 
-            opacity: 1, 
-            duration: 0.3,
-            ease: "power2.out" 
-        }, "-=0.25")
-        .to(".group-3-order-1", { 
-            scaleY: 1, 
-            duration: 0.3,
-            ease: "power2.out" 
-        }, "-=0.15")
-        .to(".group-3-order-2", { 
-            opacity: 1, 
-            duration: 0.3,
-            ease: "power2.out" 
-        }, "-=0.25")
-        .to(".group-3-order-3", { 
-            opacity: 1, 
-            scale: 1,
-            duration: 0.7,
-            ease: "bounce.out" 
-        }, "-=0.3")
-        .to(".group-4-order-1", { 
-            scaleY: 1, 
-            duration: 0.3,
-            ease: "power2.out" 
-        }, "-=0.45")
-        .to(".group-4-order-2", { 
-            opacity: 1, 
-            duration: 0.3,
-            ease: "power2.out" 
-        }, "-=0.25")
-        .to(".group-5-order-1", { 
-            scaleY: 1, 
-            duration: 0.3,
-            ease: "power2.out" 
-        }, "-=0.15")
-        .to(".group-5-order-2", { 
-            opacity: 1, 
-            duration: 0.3,
-            ease: "power2.out" 
-        }, "-=0.25")
-        .to(".group-6-order-1", { 
-            scaleY: 1, 
-            duration: 0.3,
-            ease: "power2.out" 
-        }, "-=0.15")
-        .to(".group-6-order-2", { 
-            opacity: 1, 
-            duration: 0.3,
-            ease: "power2.out" 
-        }, "-=0.25")
-        .to(".group-6-order-3", { 
-            opacity: 1, 
-            scale: 1,
-            duration: 0.7,
-            ease: "bounce.out" 
-        }, "-=0.3")
-        .to(".group-7-order-1", { 
-            scaleY: 1, 
-            duration: 0.3,
-            ease: "power2.out" 
-        }, "-=0.45")
-        .to(".group-7-order-2", { 
-            opacity: 1, 
-            duration: 0.3,
-            ease: "power2.out" 
-        }, "-=0.25")
-        .to(".group-8-order-1", { 
-            scaleY: 1, 
-            duration: 0.3,
-            ease: "power2.out" 
-        }, "-=0.15")
-        .to(".group-8-order-2", { 
-            opacity: 1, 
-            duration: 0.3,
-            ease: "power2.out" 
-        }, "-=0.25")
-        .to(".group-8-order-3", { 
-            opacity: 1, 
-            scale: 1,
-            duration: 0.7,
-            ease: "bounce.out" 
-        }, "-=0.3")
+        // Animate elements with class "show-animation"
+        tlpage3.set('#page3 .green-glow', { filter: "none" })
+        .to("#page3 .green-glow", {
+            filter: "drop-shadow(0px 0px 20px rgba(0, 255, 0, 100))",
+            duration: 1.5,
+            repeat: -1,
+            yoyo: true
+        });
     }
 
 
     function page4Animation() {
-        tlpage4.set("#page4 .fade-type", { opacity: 0, y: 30 });
-
-        // Animate elements sequentially with stagger
-        tlpage4.to("#page4 .show-order-1", { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" })
-            .to("#page4 .show-order-2", { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, "-=0.3")
-            .to("#page4 .show-order-3", { opacity: 1, y: 0, duration: 0.8, ease: "bounce.out" }, "-=0.2") // Bounce effect
-            .to("#page4 .show-order-4", { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, "-=0.3")
-            .to("#page4 .show-order-5", { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, "-=0.3");
     }
-
-
     function page5Animation() {
-        const animatedImages = document.querySelectorAll("[class^='page5-']");
-        
-        // Set initial opacity to 0 (hidden)
-        gsap.set(animatedImages, { autoAlpha: 0 });
-
-        // Animate to opacity 1 with a fast stagger effect
-        tlpage5.to(animatedImages, {
-            autoAlpha: 1, // Ensures fade-in instead of fade-out
-            duration: 0.7, // Fast fade-in
-            ease: "power2.out",
-            stagger: 0.1, // Fast stagger,
-            delay: 0.4
-        });
     }
-
-
     function page6Animation() {
-        tlpage6.set(".onlyThingAnimatedFadeIn2", { opacity: 0 })
-            .to(".onlyThingAnimatedFadeIn2", { // Fade in the specific class separately
-                opacity: 1,
-                duration: 0.7,
-                delay: 0.4,
-                ease: "power2.inOut"
-            });
     }
 
     function page7Animation() {
-        tlpage7.from(".onlyThingAnimatedFadeIn3", { 
-            opacity: 0, 
-            duration: 1, 
-            ease: "power2.out" ,
-            delay: 0.4
-        });
     }
 
     function page8Animation(){
-        tlpage8.from(".page8-1stAnimation,.page8-2ndAnimation", { 
-            opacity: 0, 
-            duration: 0.8, 
-            stagger: 0.3 ,
-            delay: 0.4
-        });
     }
 
     function page9Animation(){
-        tlpage9.from(".page9-1stAnimation", { 
-            opacity: 0, 
-            duration: 0.3,
-            delay: 0.3 
-        })
-        .from(".page9-2ndAnimation", { 
-            opacity: 0, 
-            duration: 0.3 
-        }, "+=0.3");
     }
     function page10Animation() {
-        tlpage10.set(".page10FirstAnimation, .page10-2ndAnimation", {
-            opacity: 0
-        }).set(".page10-3rdAnimation",{
-            scaleY: 0,
-            transformOrigin: "bottom center"
-        })
-        .to(".page10FirstAnimation", {
-            opacity: 1,
-            duration: 0.6,
-            ease: "power2.inOut",
-            delay: 0.3
-        })
-        .to(".page10-2ndAnimation", {
-            opacity: 1,
-            duration: 0.6,
-            ease: "power2.inOut"
-        })
-        .to(".page10-3rdAnimation", { 
-            scaleY: 1,
-            duration: 0.6,
-            ease: "power2.inOut"
-        });
     }
 
     function page11Animation() {
-        tlpage11.set(".Bar, .BarHandle", {
-            transformOrigin: "bottom",
-            scaleY: 0
-        }).set(".page11FirstAnimation, .page11-2ndAnimation, .page11-3rdAnimation, .page11-4thAnimation, .dot1 , .page11-5thAnimation, .page11-6thAnimation, .dot2 , .page11-7thAnimation, .page11-8thAnimation, .dot3 , .page11-9thAnimation, .page11-10thAnimation", {
-            opacity: 0
-        }).set(".page11-3rdAnimation, .page11-4thAnimation, .dot1, .page11-5thAnimation, .page11-6thAnimation, .dot2, .page11-7thAnimation, .page11-8thAnimation, .dot3 , .page11-9thAnimation, .page11-10thAnimation", {
-            y: -50
-        })
-        
-        // Fade-in the first two elements
-        .to(".page11FirstAnimation", { opacity: 1, duration: 0.3, delay: 0.15 })
-        .to(".page11-2ndAnimation", { opacity: 1, duration: 0.3 }, "-=0.15")
-
-        // Stagger bars and handles together with a slight delay
-        .to(".Bar", { scaleY: 1, duration: 0.3, ease: "power2.out", stagger: 0.15 }, "start")
-        // .to(".BarHandle", { scaleY: 1, duration: 0.3, ease: "power2.out", stagger: 0.15 }, "start+=0.1") // Slight offset for stagger effect
-
-        // Animate the rest of the elements
-        .to(".page11-3rdAnimation, .page11-4thAnimation, .dot1 , .page11-5thAnimation, .page11-6thAnimation, .dot2 , .page11-7thAnimation, .page11-8thAnimation, .dot3 , .page11-9thAnimation, .page11-10thAnimation", 
-            { opacity: 1, y: 0, duration: 0.3, stagger: 0.1 }, "-=0.2");
     }
 
 
     function page12Animation() {
-        tlpage12.from(".page12FirstAnimation", {
-            opacity: 0,
-            duration: 0.8,
-            ease: "bounce.out",
-            delay: 0.3
-        })
-        .from(".page12stagger", {
-            opacity: 0,
-            duration: 0.8,
-            ease: "power2.out",
-            stagger: 0.2
-        });
     }
     function page13Animation() {
-        tlpage13.from(".page13FirstAnimation", {
-            opacity: 0,
-            duration: 0.3,
-            ease: "power2.out",
-            delay: 0.5
-        })
-        .from([
-            ".page13-2ndAnimation",
-            ".page13-3rdAnimation",
-            ".page13-4thAnimation",
-            ".page13-5thAnimation",
-            ".page13-6thAnimation"
-        ], {
-            opacity: 0,
-            duration: 0.3,
-            ease: "power2.out",
-            stagger: 0.2 // Adjust stagger time as needed
-        });
     }
     function page14Animation() {
-        // Staggered fade-in for elements with .dosagestagger
-        tlpage14.from(".dosagestagger", {
-            opacity: 0,
-            duration: 0.6,
-            ease: "power2.out",
-            stagger: 0.3,
-            delay: 0.3
-        });
-
-        // Fade-in for the last element
-        tlpage14.from(".orderDosageLast", {
-            opacity: 0,
-            scale: 0.8,  // Start slightly smaller
-            duration: 0.5,
-            ease: "bounce.out"  // Adds a pop-up bounce effect
-        });
     }
 
     function page15Animation(){
@@ -762,12 +497,6 @@
     }
     page1Animation();
 
-    gsap.to(".green-glow", {
-            filter: "drop-shadow(0px 0px 20px rgba(0, 255, 0, 100))",
-            duration: 1.5,
-            repeat: 5,
-            yoyo: true
-        });
   </script>
 
 </body>
